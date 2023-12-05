@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300&family=Roboto:wght@400;700&display=swap"
+        rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Gilroy-Heavy';
+            src: local('Gilroy-Heavy'), url(./Assests/gilroy/Gilroy-Heavy.ttf) format('truetype');
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Montserrat', sans-serif;
+            color: #fff;
+        }
+
+        html,
+        body {
+            height: 100%;
+            width: 100%;
+        }
+
+        #cursor {
+            height: 1em;
+            width: 1em;
+            border-radius: 50%;
+            background-color: #95c11e;
+            position: fixed;
+            z-index: 99;
+        }
+
+        #cursor-blur {
+            height: 25em;
+            width: 25em;
+            border-radius: 50%;
+            background-color: #96c11e3b;
+            position: fixed;
+            filter: blur(40px);
+            z-index: 9;
+        }
+
+        #nav {
+            height: 120px;
+            width: 100%;
+            /* background-color: red; */
+            display: flex;
+            align-items: center;
+            padding: 0 120px;
+            gap: 30px;
+            position: fixed;
+            justify-content: flex-start;
+            z-index: 999;
+        }
+
+        #nav img {
+            height: 75px;
+            width: 75px;
+        }
+
+        #nav h5 {
+            text-transform: uppercase;
+            font-weight: 500;
+        }
+
+        #main_video {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            position: fixed;
+            z-index: -1;
+        }
+
+        #main {
+            position: absolute;
+            top: 0;
+            width: 100%;
+            background-color: rgba(0, 0, 0, 0.39);
+        }
+
+        #page1 {
+            height: 100vh;
+            width: 100%;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            text-align: center;
+            z-index: 10;
+        }
+
+        #page1 h1 {
+            font-size: 7.5vw;
+            font-weight: 900;
+            position: relative;
+        }
+
+        #page1 h1::before {
+            content: "EAT. DRINK. PLAY.";
+            font-size: 7.5vw;
+            font-weight: 900;
+            color: #000;
+            position: absolute;
+            -webkit-text-stroke: 1px #96c11e6b;
+            left: -4px;
+            top: -4px;
+            z-index: -1;
+        }
+
+        #page1 h2 {
+            font-size: 30px;
+            font-weight: 400;
+            margin-top: 10px;
+            margin-bottom: 20px;
+        }
+
+        #page1 p {
+            font-size: 1.2vw;
+            font-weight: 300;
+            width: 40%;
+        }
+
+        #page2 {
+            min-height: 100vh;
+            width: 100%;
+            z-index: 10;
+        }
+
+        #scroller {
+            white-space: nowrap;
+            position: relative;
+            display: inline-block;
+            overflow-x: auto;
+            overflow-y: hidden;
+            width: 100%;
+            z-index: 10;
+        }
+
+        #scroller::-webkit-scrollbar {
+            display: none;
+        }
+
+        .scroller-in {
+            display: inline-block;
+            white-space: nowrap;
+            animation-name: scroll;
+            animation-duration: 40s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+        }
+
+        .scroller-in h5 {
+            font-size: 6em;
+            text-transform: uppercase;
+            margin-left: 10px;
+            display: inline-block;
+            color: #000;
+            -webkit-text-stroke: 1px #ffffff;
+            font-family: 'Gilroy-Heavy', sans-serif;
+            font-weight: 900;
+            transition: all linear 0.3s;
+        }
+
+        .scroller-in h5:hover {
+            color: #95c11e !important;
+            -webkit-text-stroke: 1px #95c11e;
+        }
+
+        @keyframes scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-100%);
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <!-- <img src="./Assests/logo.png" alt="website_logo" /> -->
+        <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/logo-white.svg" alt="website_logo" />
+        <h5>toptracer range</h5>
+        <h5>golf lessons</h5>
+        <h5>adventure golf</h5>
+        <h5>coffee shop</h5>
+        <h5>leagues</h5>
+    </div>
+    <div id="cursor"></div>
+    <div id="cursor-blur"></div>
+    <video autoplay loop muted id="main_video" src="./Assests/hero.mp4"></video>
+    <div id="main">
+        <div id="page1">
+            <h1>EAT. DRINK. PLAY.</h1>
+            <h2>
+                WELCOME TO SIDCUP FAMILY GOLF!
+            </h2>
+            <P>Sidcup Family Golf is a multipurpose golf facility located in sidcup, South East London. Passionate about
+                technology, player development and making golf fun and accessible to everyone. </P>
+        </div>
+        <div id="page2">
+            <div id="scroller">
+                <div class="scroller-in">
+                    <h5>toptracer range</h5>
+                    <h5>golf lessons</h5>
+                    <h5>adventure golf</h5>
+                    <h5>coffee shop</h5>
+                    <h5>leagues</h5>
+                </div>
+                <div class="scroller-in">
+                    <h5>toptracer range</h5>
+                    <h5>golf lessons</h5>
+                    <h5>adventure golf</h5>
+                    <h5>coffee shop</h5>
+                    <h5>leagues</h5>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/gsap.min.js"
+        integrity="sha512-7Au1ULjlT8PP1Ygs6mDZh9NuQD0A5prSrAUiPHMXpU6g3UMd8qesVnhug5X4RoDr35x5upNpx0A6Sisz1LSTXA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.3/ScrollTrigger.min.js"
+        integrity="sha512-LQQDtPAueBcmGXKdOBcMkrhrtqM7xR2bVrnMtYZ8ImAZhFlIb5xrMqQ6uZviyeSB+4mYj89ta8niiCIQM1Gj0w=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./script.js"></script>
+
+</body>
+
+</html>
