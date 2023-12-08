@@ -13,183 +13,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap" rel="stylesheet">
-    <style>
-        @font-face {
-            font-family: 'Gilroy-Heavy';
-            src: local('Gilroy-Heavy'), url(./Assests/gilroy/Gilroy-Heavy.ttf) format('truetype');
-        }
-
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-            font-family: 'Montserrat', sans-serif;
-            color: #fff;
-        }
-
-        html,
-        body {
-            height: 100%;
-            width: 100%;
-        }
-
-        #cursor {
-            height: 1em;
-            width: 1em;
-            border-radius: 50%;
-            background-color: #95c11e;
-            position: fixed;
-            z-index: 99;
-        }
-
-        #cursor-blur {
-            height: 25em;
-            width: 25em;
-            border-radius: 50%;
-            background-color: #96c11e3b;
-            position: fixed;
-            filter: blur(40px);
-            z-index: 9;
-        }
-
-        #nav {
-            height: 120px;
-            width: 100%;
-            /* background-color: red; */
-            display: flex;
-            align-items: center;
-            padding: 0 120px;
-            gap: 30px;
-            position: fixed;
-            justify-content: flex-start;
-            z-index: 999;
-        }
-
-        #nav img {
-            height: 75px;
-            width: 75px;
-        }
-
-        #nav h5 {
-            text-transform: uppercase;
-            font-weight: 500;
-        }
-
-        #main_video {
-            height: 100%;
-            width: 100%;
-            object-fit: cover;
-            position: fixed;
-            z-index: -1;
-        }
-
-        #main {
-            position: absolute;
-            top: 0;
-            width: 100%;
-            background-color: rgba(0, 0, 0, 0.39);
-        }
-
-        #page1 {
-            height: 100vh;
-            width: 100%;
-            position: relative;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-            text-align: center;
-            z-index: 10;
-        }
-
-        #page1 h1 {
-            font-size: 7.5vw;
-            font-weight: 900;
-            position: relative;
-        }
-
-        #page1 h1::before {
-            content: "EAT. DRINK. PLAY.";
-            font-size: 7.5vw;
-            font-weight: 900;
-            color: #000;
-            position: absolute;
-            -webkit-text-stroke: 1px #96c11e6b;
-            left: -4px;
-            top: -4px;
-            z-index: -1;
-        }
-
-        #page1 h2 {
-            font-size: 30px;
-            font-weight: 400;
-            margin-top: 10px;
-            margin-bottom: 20px;
-        }
-
-        #page1 p {
-            font-size: 1.2vw;
-            font-weight: 300;
-            width: 40%;
-        }
-
-        #page2 {
-            min-height: 100vh;
-            width: 100%;
-            z-index: 10;
-        }
-
-        #scroller {
-            white-space: nowrap;
-            position: relative;
-            display: inline-block;
-            overflow-x: auto;
-            overflow-y: hidden;
-            width: 100%;
-            z-index: 10;
-        }
-
-        #scroller::-webkit-scrollbar {
-            display: none;
-        }
-
-        .scroller-in {
-            display: inline-block;
-            white-space: nowrap;
-            animation-name: scroll;
-            animation-duration: 40s;
-            animation-timing-function: linear;
-            animation-iteration-count: infinite;
-        }
-
-        .scroller-in h5 {
-            font-size: 6em;
-            text-transform: uppercase;
-            margin-left: 10px;
-            display: inline-block;
-            color: #000;
-            -webkit-text-stroke: 1px #ffffff;
-            font-family: 'Gilroy-Heavy', sans-serif;
-            font-weight: 900;
-            transition: all linear 0.3s;
-        }
-
-        .scroller-in h5:hover {
-            color: #95c11e !important;
-            -webkit-text-stroke: 1px #95c11e;
-        }
-
-        @keyframes scroll {
-            from {
-                transform: translateX(0);
-            }
-
-            to {
-                transform: translateX(-100%);
-            }
-
-        }
-    </style>
+    <link rel="stylesheet" href="./style.css">
 </head>
 
 <body>
@@ -229,6 +53,54 @@
                     <h5>adventure golf</h5>
                     <h5>coffee shop</h5>
                     <h5>leagues</h5>
+                </div>
+            </div>
+            <div id="about-us">
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-about-1-300x200.jpg?strip=all&lossy=1&sharp=1&ssl=1"
+                    alt="">
+                <div id="about-us-in">
+                    <h3>ABOUT US</h3>
+                    <p>
+                        Home to a 46-bay, multi-tier, floodlit driving range, powered by
+                        Toptracer Range technology. Complimented by a practice green and
+                        bunker, coffee shop and American Golf Store. There truly is
+                        something for everyone as we also boast two outdoor 18-hole
+                        dinosaur themed crazy golf courses.
+                    </p>
+                </div>
+                <img src="https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-about-2-300x200.jpg?strip=all&lossy=1&sharp=1&ssl=1"
+                    alt="">
+            </div>
+            <div id="cards-container">
+                <div class="card" id="card-1">
+                    <div class="overlay">
+                        <h4>TopRacer Range</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+                            quam molestias magni cupiditate architecto et enim quas facere
+                            ipsum tempora?
+                        </p>
+                    </div>
+                </div>
+                <div class="card" id="card-2">
+                    <div class="overlay">
+                        <h4>Adventure Golf</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+                            quam molestias magni cupiditate architecto et enim quas facere
+                            ipsum tempora?
+                        </p>
+                    </div>
+                </div>
+                <div class="card" id="card-3">
+                    <div class="overlay">
+                        <h4>Golf Lessons</h4>
+                        <p>
+                            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nulla
+                            quam molestias magni cupiditate architecto et enim quas facere
+                            ipsum tempora?
+                        </p>
+                    </div>
                 </div>
             </div>
         </div>

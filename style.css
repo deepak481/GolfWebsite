@@ -1,0 +1,275 @@
+@font-face {
+    font-family: 'Gilroy-Heavy';
+    src: local('Gilroy-Heavy'), url(./Assests/gilroy/Gilroy-Heavy.ttf) format('truetype');
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+#cursor {
+    height: 1em;
+    width: 1em;
+    border-radius: 50%;
+    background-color: #95c11e;
+    position: fixed;
+    z-index: 99;
+}
+
+#cursor-blur {
+    height: 25em;
+    width: 25em;
+    border-radius: 50%;
+    background-color: #96c11e3b;
+    position: fixed;
+    filter: blur(40px);
+    z-index: 9;
+}
+
+#nav {
+    height: 120px;
+    width: 100%;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0 120px;
+    gap: 30px;
+    position: fixed;
+    justify-content: flex-start;
+    z-index: 999;
+}
+
+#nav img {
+    height: 75px;
+    width: 75px;
+}
+
+#nav h5 {
+    text-transform: uppercase;
+    font-weight: 500;
+}
+
+#main_video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: fixed;
+    z-index: -1;
+}
+
+#main {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.39);
+}
+
+#page1 {
+    height: 100vh;
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    z-index: 10;
+}
+
+#page1 h1 {
+    font-size: 7.5vw;
+    font-weight: 900;
+    position: relative;
+}
+
+#page1 h1::before {
+    content: "EAT. DRINK. PLAY.";
+    font-size: 7.5vw;
+    font-weight: 900;
+    color: #000;
+    position: absolute;
+    -webkit-text-stroke: 1px #96c11e6b;
+    left: -4px;
+    top: -4px;
+    z-index: -1;
+}
+
+#page1 h2 {
+    font-size: 30px;
+    font-weight: 400;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#page1 p {
+    font-size: 1.2vw;
+    font-weight: 300;
+    width: 40%;
+}
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller {
+    white-space: nowrap;
+    position: relative;
+    display: inline-block;
+    overflow-x: auto;
+    overflow-y: hidden;
+    width: 100%;
+    z-index: 10;
+}
+
+#scroller::-webkit-scrollbar {
+    display: none;
+}
+
+.scroller-in {
+    display: inline-block;
+    white-space: nowrap;
+    animation-name: scroll;
+    animation-duration: 40s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+}
+
+.scroller-in h5 {
+    font-size: 6em;
+    text-transform: uppercase;
+    margin-left: 10px;
+    display: inline-block;
+    color: #000;
+    -webkit-text-stroke: 1px #ffffff;
+    font-family: 'Gilroy-Heavy', sans-serif;
+    font-weight: 900;
+    transition: all linear 0.3s;
+}
+
+.scroller-in h5:hover {
+    color: #95c11e !important;
+    -webkit-text-stroke: 1px #95c11e;
+}
+
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+
+}
+
+#about-us {
+    height: 40vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    padding: 0 3.1em;
+    position: relative;
+    z-index: 10;
+}
+
+#about-us img {
+    height: 10em;
+    width: 10em;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+#about-us-in {
+    width: 68%;
+    text-align: center;
+}
+
+#about-us-in h3 {
+    font-weight: 800;
+    font-size: 2.5em;
+    margin-bottom: 0.7em;
+}
+
+#about-us-in p {
+    font-size: 1.2em;
+    line-height: 1.3em;
+}
+
+#cards-container {
+    display: flex;
+    gap: 4.5em;
+    align-items: center;
+    justify-content: center;
+    height: 40vh;
+    position: relative;
+    z-index: 10;
+    margin: 3em 0 3em 0
+}
+
+.card {
+    height: 100%;
+    width: 23%;
+    background-color: red;
+    background-size: cover;
+    background-position: center;
+    overflow: hidden;
+    border-radius: 1.5em;
+    transition: all linear 0.4s;
+}
+
+#card-1 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-toptracer-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card-2 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/hero-4-1024x1024.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+#card-3 {
+    background-image: url(https://eiwgew27fhz.exactdn.com/wp-content/uploads/2023/02/home-lessons-1024x682.jpg?strip=all&lossy=1&sharp=1&ssl=1);
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: #95c11e;
+    padding: 4em 2em 0 2em;
+    opacity: 0;
+    transition: all linear 0.6s;
+    overflow: hidden;
+}
+
+.overlay h4 {
+    color: #000;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    white-space: nowrap;
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
+.overlay p {
+    color: #000;
+    font-size: 1em;
+}
+
+.card:hover .overlay {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: rotate3d(-1, 1, 0, 20deg) !important;
+}
