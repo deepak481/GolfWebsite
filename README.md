@@ -11,7 +11,7 @@ Resources Used:
 
 
      
-  2.Remix Icon: For icons
+  2. Remix Icon: For icons
 
   
   3. Fonts: Gilroy, Montserrat
