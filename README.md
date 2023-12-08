@@ -7,7 +7,11 @@ Learnt from : https://www.youtube.com/watch?v=xG1_vbVPUUs
 
 Resources Used: 
   1. GSAP: For Animation
+
+     
   2.Remix Icon: For icons
+
+  
   3. Fonts: Gilroy, Montserrat
 
 
