@@ -22,6 +22,22 @@ body {
     width: 100%;
 }
 
+*::selection {
+    background-color: #fff;
+    color: #95c11e;
+}
+
+body::-webkit-scrollbar {
+    display: block;
+    width: 5px;
+    background: linear-gradient(to right bottom, #95c11e, #000);
+}
+
+body::-webkit-scrollbar-thumb {
+    border-radius: 50px;
+    background-color: #fff;
+}
+
 #cursor {
     height: 1em;
     width: 1em;
