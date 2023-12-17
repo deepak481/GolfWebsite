@@ -22,6 +22,14 @@ body {
     width: 100%;
 }
 
+#warning {
+    display: none;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    background-color: #95c11e;
+}
+
 *::selection {
     background-color: #fff;
     color: #95c11e;
@@ -55,6 +63,28 @@ body::-webkit-scrollbar-thumb {
     position: fixed;
     filter: blur(40px);
     z-index: 9;
+}
+
+@media only screen and (max-width: 1300px) {
+    body {
+        overflow-x: hidden;
+        overflow-y: hidden;
+    }
+
+    #mainContent {
+        display: none;
+    }
+
+    #warning {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        z-index: 99999;
+        text-align: center;
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
 }
 
 #nav {
